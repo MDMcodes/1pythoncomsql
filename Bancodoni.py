@@ -46,3 +46,6 @@ dados_tabela = cursor.fetchall()
 print(dados_tabela[0][0])
 print(dados_tabela[1][1])
 print(dados_tabela[2][2])
+
+for i in dados_tabela:
+    print(f'ID: {i[0]}  PRODUTO {i[1]}   VALOR: {i[2]}')
