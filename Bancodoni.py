@@ -32,7 +32,17 @@ cursor = conexao_banco.cursor()
 
 #DELETE
 
-input_id = int(input('Digite o id do produto que você deseja deletar: '))
-comando_sql = f'DELETE FROM produtos WHERE id_produtos = {input_id}'
+# input_id = int(input('Digite o id do produto que você deseja deletar: '))
+
+# comando_sql = f'DELETE FROM produtos WHERE id_produtos = {input_id}'
+# cursor.execute(comando_sql)
+# conexao_banco.commit()
+
+#READ
+
+comando_sql = 'SELECT * FROM produtos'
 cursor.execute(comando_sql)
-conexao_banco.commit()
+dados_tabela = cursor.fetchall()
+print(dados_tabela[0][0])
+print(dados_tabela[1][1])
+print(dados_tabela[2][2])
