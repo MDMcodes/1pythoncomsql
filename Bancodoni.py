@@ -73,6 +73,7 @@ for dados in dados_tabela:
             conexao_banco.commit()
     else:
         print('ID não encontrado')
+        break
 
 
 
